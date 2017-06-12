@@ -1,0 +1,16 @@
+<label>Toggle</label>
+<br>
+<button
+  class="btn btn-primary"
+  (click)="onToggle()"
+>Display Detail
+</button>
+
+<p *ngIf="showDetail">Detail is displayed!!!</p>
+
+<div *ngFor="let timestamp of timestamps; let i = index">
+  <p
+    [ngStyle]="{backgroundColor: i < 6 ? 'Green' : 'Black'}"
+    [ngClass]="{change: i > 5 }"
+  >Button was pressed {{ count }} times at {{ timestamp }}</p>
+</div>
